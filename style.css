@@ -1,11 +1,37 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;500;900&display=swap");
 
+/* * {
+  
+ box-sizing: border-box;
+}
+
+* {
+  border: 1px solid red
+} */
+
+@media (max-width: 2000px) {
+  /* Pour un écran < 960px, cette classe CSS s'applique */
+  .container {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Pour un écran < 960px, cette classe CSS s'applique */
+  .container {
+    width: 900px;
+    margin: auto;
+  }
+}
+
+
 @media (max-width: 960px) {
   /* Pour un écran < 960px, cette classe CSS s'applique */
   .container {
-    width: 600px;
-    margin: 40px auto;
+    width: 700px;
+    margin: auto;
   }
 }
 
@@ -13,7 +39,7 @@
   /* Pour un écran < 720px, cette classe CSS s'applique */
   .container {
     width: 500px;
-    margin: 20px auto;
+    margin: auto;
   }
 }
 
@@ -21,7 +47,7 @@
   /* Pour un écran < 540px, cette classe CSS s'applique */
   .container {
     width: 300px;
-    margin: 10px auto;
+    margin: auto;
   }
 }
 
@@ -60,11 +86,11 @@ a:hover {
 }
 
 .btn {
-  /* margin: 0px; */
+  margin: 40px;
   background-color: 3F72AF;
   color: DBE2EF;
   border-radius: 8px;
-  padding: 16px 24px;
+  padding: 8px 16px;
   border: 4px solid transparent;
 }
 
@@ -73,6 +99,11 @@ a:hover {
   color: 3F72AF;
   border: 4px solid 3F72AF;
 }
+
+/* .container {
+  width: 700px;
+  margin: 40px auto;
+} */
 
 .card {
 background-color: white;
@@ -92,17 +123,20 @@ text-align: center;
   display: inline-block;
   list-style: none;
   padding-left: 0px;
+  margin: 20px;
 }
 
 .list-inline > li {
-  /* display: inline-block; */
+  display: inline-block;
   padding: 0px 40px;
+  margin: 20px;
 }
 
 .fab {
   font-size: 50px;
 }
 
-#description {
+#description
+{
   padding: 30px;
 }
