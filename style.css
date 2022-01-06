@@ -1,36 +1,79 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;500;900&display=swap");
 
-/* * {
-  
- box-sizing: border-box;
+* {
+   box-sizing: border-box;
 }
 
-* {
+/* * {
   border: 1px solid red
 } */
 
-@media (max-width: 2000px) {
-  /* Pour un écran < 960px, cette classe CSS s'applique */
-  .container {
-    width: 1200px;
-    margin: auto;
-  }
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
-@media (max-width: 1200px) {
-  /* Pour un écran < 960px, cette classe CSS s'applique */
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+/* @media (max-width: 1200px) {
   .container {
     width: 900px;
     margin: auto;
   }
-}
+} */
 
 
 @media (max-width: 960px) {
   /* Pour un écran < 960px, cette classe CSS s'applique */
   .container {
-    width: 700px;
+    width: 600px;
     margin: auto;
   }
 }
@@ -79,6 +122,7 @@ a {
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
+  color: black
 }
 
 a:hover {
@@ -87,23 +131,20 @@ a:hover {
 
 .btn {
   margin: 40px;
-  background-color: 3F72AF;
-  color: DBE2EF;
-  border-radius: 8px;
-  padding: 8px 16px;
-  border: 4px solid transparent;
+  /* background-color: #3F72AF;
+  color: #DBE2EF;
+  border-radius: 8px; */
+  padding: 4px 8px;
+  /* border: 4px solid #3F72AF; */
 }
 
 .btn:hover {
-  background-color: DBE2EF;
-  color: 3F72AF;
-  border: 4px solid 3F72AF;
+  background-color: #DBE2EF;
+  /* color: #3F72AF;
+  border: 4px solid #3F72AF; */
 }
 
-/* .container {
-  width: 700px;
-  margin: 40px auto;
-} */
+
 
 .card {
 background-color: white;
@@ -117,6 +158,8 @@ text-align: center;
 .avatar-circle {
   width: 150px;
   border-radius: 50%;
+  margin: 32px auto;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
 }
 
 .list-inline {
@@ -136,7 +179,16 @@ text-align: center;
   font-size: 50px;
 }
 
-#description
-{
+#description{
   padding: 30px;
 }
+
+#photo_paysage{
+ background-image: url("wolfgang-hasselmann-JycMuGdocIM-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* #btn_wagon{
+  background-image: url(https://dwj199mwkel52.cloudfront.net/assets/core/svg/logo-lewagon-5ff5f090209d8d3bf493790d7935822208011748adb83a2fbc6bcaaf05a289ef.svg);
+} */
